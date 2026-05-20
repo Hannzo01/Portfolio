@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenza Mzouri — Systems Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar">
+        <span class="logo">
+            <span class="prompt">~/kenza</span>
+            <span class="cursor-blink">▋</span>
+        </span>
+        <ul class="nav-links">
+            <li><a href="#about"><span class="nav-prefix">//</span>about</a></li>
+            <li><a href="#skills"><span class="nav-prefix">//</span>skills</a></li>
+            <li><a href="#projects"><span class="nav-prefix">//</span>projects</a></li>
+            <li><a href="#contact"><span class="nav-prefix">//</span>contact</a></li>
+        </ul>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span class="status-text">available</span>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="hero" class="hero">
+            <div class="hero-eyebrow">
+                <span class="tag-line">$ whoami</span>
+            </div>
+            <div class="hero-name">
+                <h1>
+                    <span class="name-line-1">KENZA</span>
+                    <span class="name-line-2">MZOURI</span>
+                </h1>
+                <div class="name-glitch" aria-hidden="true">
+                    <span>KENZA</span>
+                    <span>MZOURI</span>
+                </div>
+            </div>
+
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-key">role</span>
+                    <span class="meta-sep">→</span>
+                    <span class="meta-val">Systems &amp; Infrastructure Engineer</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-key">stack</span>
+                    <span class="meta-sep">→</span>
+                    <span class="meta-val">C / C++98 / Docker / Linux</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-key">school</span>
+                    <span class="meta-sep">→</span>
+                    <span class="meta-val">1337 Coding School — UM6P, Rabat</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-key">status</span>
+                    <span class="meta-sep">→</span>
+                    <span class="meta-val highlight">seeking challenges <span class="blink-dot">●</span></span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">ls -la ./projects</a>
+                <a href="https://github.com/Hannzo01" target="_blank" class="btn btn-ghost">
+                    <i class="devicon-github-original"></i> Hannzo01
+                </a>
+            </div>
+
+            <div class="hero-deco">
+                <div class="code-block">
+                    <div class="cb-header">
+                        <span class="cb-dot red"></span>
+                        <span class="cb-dot yellow"></span>
+                        <span class="cb-dot green"></span>
+                        <span class="cb-title">main.c</span>
+                    </div>
+                    <pre class="cb-body"><span class="c-type">int</span> <span class="c-fn">main</span>(<span class="c-type">void</span>) {
+  <span class="c-kw">while</span> (<span class="c-num">42</span>) {
+    learn();
+    build();
+    ship();
+  }
+  <span class="c-kw">return</span> (<span class="c-num">0</span>);
+}</pre>
+                </div>
+                <div class="stat-badges">
+                    <div class="stat-b">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-lbl">systems<br>projects</span>
+                    </div>
+                    <div class="stat-b">
+                        <span class="stat-num">0</span>
+                        <span class="stat-lbl">memory<br>leaks</span>
+                    </div>
+                    <div class="stat-b">
+                        <span class="stat-num">∞</span>
+                        <span class="stat-lbl">norminette<br>passes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-label">
+                <span class="label-num">01</span>
+                <span class="label-text">about</span>
+                <div class="label-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text-block">
+                    <p>
+                        Student at <strong>1337 (UM6P)</strong> — a peer-to-peer coding school modeled on École 42.
+                        No teachers. No lectures. Just code, pain, and figuring it out.
+                    </p>
+                    <p>
+                        I specialize in <strong>low-level systems programming</strong> — the kind where one
+                        off-by-one error at 2 AM haunts you for days. C, C++98, sockets, threads, processes.
+                        I've containerized entire infrastructures, written shells from scratch, and debugged
+                        race conditions nobody wants to debug.
+                    </p>
+                    <p>
+                        Before this, I studied Economics for two years — which means I think in systems,
+                        trade-offs, and constraints. Turns out that translates perfectly to writing efficient code.
+                    </p>
+                </div>
+                <div class="about-terminal">
+                    <div class="term-header">
+                        <span class="term-title">terminal</span>
+                    </div>
+                    <div class="term-body" id="terminal-body">
+                        <div class="term-line"><span class="t-prompt">kenza@1337:~$</span> <span class="t-cmd">cat philosophy.txt</span></div>
+                        <div class="term-line t-out">write it in C first.</div>
+                        <div class="term-line t-out">if it leaks, you didn't understand it.</div>
+                        <div class="term-line t-out">man pages are documentation.</div>
+                        <div class="term-line t-out">segfaults are just questions.</div>
+                        <div class="term-line"><span class="t-prompt">kenza@1337:~$</span> <span class="cursor-blink">▋</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-label">
+                <span class="label-num">02</span>
+                <span class="label-text">skills</span>
+                <div class="label-line"></div>
+            </div>
+            <div class="skills-layout">
+                <div class="skill-col">
+                    <h4 class="skill-col-title">Languages</h4>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="devicon-c-plain colored"></i>
+                            <span class="sk-name">C</span>
+                            <div class="sk-bar"><div class="sk-fill" style="--w:92%"></div></div>
+                            <span class="sk-level">expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-cplusplus-plain colored"></i>
+                            <span class="sk-name">C++98</span>
+                            <div class="sk-bar"><div class="sk-fill" style="--w:85%"></div></div>
+                            <span class="sk-level">advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-bash-plain"></i>
+                            <span class="sk-name">Bash</span>
+                            <div class="sk-bar"><div class="sk-fill" style="--w:78%"></div></div>
+                            <span class="sk-level">advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span class="sk-name">HTML/CSS</span>
+                            <div class="sk-bar"><div class="sk-fill" style="--w:70%"></div></div>
+                            <span class="sk-level">proficient</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-col">
+                    <h4 class="skill-col-title">Infrastructure</h4>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="devicon-linux-plain"></i>
+                            <span class="sk-name">Linux</span>
+                            <div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div>
+                            <span class="sk-level">expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-docker-plain colored"></i>
+                            <span class="sk-name">Docker</span>
+                            <div class="sk-bar"><div class="sk-fill" style="--w:85%"></div></div>
+                            <span class="sk-level">advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-nginx-original colored"></i>
+                            <span class="sk-name">Nginx</span>
+                            <div class="sk-bar"><div class="sk-fill" style="--w:75%"></div></div>
+                            <span class="sk-level">advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-mariadb-original colored"></i>
+                            <span class="sk-name">MariaDB / Redis</span>
+                            <div class="sk-bar"><div class="sk-fill" style="--w:68%"></div></div>
+                            <span class="sk-level">proficient</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-col">
+                    <h4 class="skill-col-title">Concepts</h4>
+                    <div class="concept-tags">
+                        <span class="ctag">Algorithms / DSA</span>
+                        <span class="ctag active">Systems Programming</span>
+                        <span class="ctag">OOP</span>
+                        <span class="ctag active">Networking / TCP</span>
+                        <span class="ctag">I/O Multiplexing</span>
+                        <span class="ctag active">Concurrency</span>
+                        <span class="ctag">Memory Management</span>
+                        <span class="ctag">Containerization</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-label">
+                <span class="label-num">03</span>
+                <span class="label-text">projects</span>
+                <div class="label-line"></div>
+            </div>
+            <div class="projects-list">
+
+                <article class="project-row" data-index="01">
+                    <div class="pr-index">01</div>
+                    <div class="pr-body">
+                        <div class="pr-top">
+                            <h4 class="pr-title">ft_irc</h4>
+                            <div class="pr-tags">
+                                <span>C++98</span>
+                                <span>Sockets</span>
+                                <span>select()</span>
+                            </div>
+                            <a href="https://github.com/Hannzo01" target="_blank" class="pr-link">↗</a>
+                        </div>
+                        <p class="pr-desc">Full IRC server in C++98. Multiple simultaneous clients over TCP/IP with non-blocking I/O multiplexing via <code>select()</code>. Implements the IRC protocol — channels, operators, private messages, kicks.</p>
+                        <div class="pr-challenge">
+                            <span class="ch-label">HARD PART</span>
+                            Non-blocking network I/O + rigorous memory management to keep it leak-free under any load.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-row" data-index="02" >
+                    <div class="pr-index">02</div>
+                    <div class="pr-body">
+                        <div class="pr-top">
+                            <h4 class="pr-title">Minishell</h4>
+                            <div class="pr-tags">
+                                <span>C</span>
+                                <span>Linux Syscalls</span>
+                                <span>AST</span>
+                            </div>
+                            <a href="https://github.com/Hannzo01" target="_blank" class="pr-link">↗</a>
+                        </div>
+                        <p class="pr-desc">
+                            Bash clone written in C. Implemented the execution engine for commands using
+                            <code>fork</code> / <code>execve</code>, including pipes, I/O redirections,
+                            built-ins, environment variables, process management, and UNIX signal handling.
+                        </p>
+
+                        <div class="pr-challenge">
+                            <span class="ch-label">HARD PART</span>
+                            Managing process execution flow correctly across pipes, redirections,
+                            built-ins, and signals while keeping behavior consistent with Bash.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-row" data-index="03" ="">
+                    <div class="pr-index">03</div>
+                    <div class="pr-body">
+                        <div class="pr-top">
+                            <h4 class="pr-title">Inception</h4>
+                            <div class="pr-tags">
+                                <span>Docker</span>
+                                <span>Nginx</span>
+                                <span>MariaDB</span>
+                            </div>
+                            <a href="https://github.com/Hannzo01" target="_blank" class="pr-link">↗</a>
+                        </div>
+                        <p class="pr-desc">Full virtualized infrastructure via Docker Compose. Custom-built Debian containers — no pre-made images allowed. TLS-only Nginx → WordPress → MariaDB + Redis cache. Locked down network security.</p>
+                        <div class="pr-challenge">
+                            <span class="ch-label">HARD PART</span>
+                            Inter-container networking, secret management, and boot-order dependencies without docker-compose hacks.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-row">
+                    <div class="pr-index">04</div>
+                    <div class="pr-body">
+                        <div class="pr-top">
+                            <h4 class="pr-title">Philosophers</h4>
+                            <div class="pr-tags">
+                                <span>C</span>
+                                <span>pthreads</span>
+                                <span>Mutexes</span>
+                            </div>
+                            <a href="https://github.com/Hannzo01" target="_blank" class="pr-link">↗</a>
+                        </div>
+                        <p class="pr-desc">Dining philosophers simulation. Concurrent threads sharing resources without deadlocks or data races. Nanosecond-precision timing to detect starvation. A mandatory descent into concurrent programming hell.</p>
+                        <div class="pr-challenge">
+                            <span class="ch-label">HARD PART</span>
+                            Eliminating all races under Valgrind while keeping timing accurate enough to pass death checks.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-row" data-index="05" >
+                    <div class="pr-index">05</div>
+                    <div class="pr-body">
+                        <div class="pr-top">
+                            <h4 class="pr-title">push_swap</h4>
+                            <div class="pr-tags">
+                                <span>C</span>
+                                <span>Sorting Algorithms</span>
+                                <span>Stack Ops</span>
+                            </div>
+                            <a href="https://github.com/Hannzo01" target="_blank" class="pr-link">↗</a>
+                        </div>
+                        <p class="pr-desc">Sorts a stack of integers using only two stacks (a &amp; b) and a restricted set of operations — <code>sa</code>, <code>sb</code>, <code>ra</code>, <code>rb</code>, <code>rr</code>, <code>pa</code>, <code>pb</code>. The goal: sort in the minimum possible number of moves.</p>
+                        <div class="pr-challenge">
+                            <span class="ch-label">HARD PART</span>
+                            Designing a hybrid algorithm that hits the move-count ceiling for 500 integers without brute-forcing it.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-row" data-index="06" >
+                    <div class="pr-index">06</div>
+                    <div class="pr-body">
+                        <div class="pr-top">
+                            <h4 class="pr-title">cub3D</h4>
+                            <div class="pr-tags">
+                                <span>C</span>
+                                <span>Raycasting</span>
+                                <span>MiniLibX</span>
+                            </div>
+                            <a href="https://github.com/Hannzo01" target="_blank" class="pr-link">↗</a>
+                        </div>
+                        <p class="pr-desc">A Wolfenstein-3D–style raycaster built from scratch in C. Parses a <code>.cub</code> map file, renders a pseudo-3D first-person perspective using DDA raycasting, textured walls, and a minimap — all in MiniLibX.</p>
+                        <div class="pr-challenge">
+                            <span class="ch-label">HARD PART</span>
+                            Getting the DDA algorithm right so walls render without fish-eye distortion, and handling all map edge cases cleanly.
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="timeline" class="section">
+            <div class="section-label">
+                <span class="label-num">04</span>
+                <span class="label-text">education</span>
+                <div class="label-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="tl-item active">
+                    <div class="tl-left">
+                        <span class="tl-date">2024 → 2026</span>
+                        <span class="tl-active-badge">now</span>
+                    </div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-right">
+                        <h4>Software Engineering</h4>
+                        <p>1337 Coding School — UM6P, Rabat</p>
+                        <span class="tl-note">peer-to-peer · problem solving · 42 network</span>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-left">
+                        <span class="tl-date">2019 → 2021</span>
+                    </div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-right">
+                        <h4>DEUG in Economics</h4>
+                        <p>FSJES, Meknès</p>
+                        <span class="tl-note">strategic decision-making · trade-offs · critical thinking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="section-label">
+                <span class="label-num">05</span>
+                <span class="label-text">contact</span>
+                <div class="label-line"></div>
+            </div>
+            <div class="contact-block">
+                <p class="contact-big">Let's build<br><em>something hard.</em></p>
+                <p class="contact-sub">Open to internships, projects, and engineering challenges worth solving.</p>
+                <div class="contact-links">
+                    <a href="mailto:kenzamzouri25@gmail.com" class="btn btn-primary">
+                        send message<span class="btn-arrow">→</span>
+                    </a>
+                    <a href="https://github.com/Hannzo01" target="_blank" class="btn btn-ghost">
+                        <i class="devicon-github-original"></i> Hannzo01
+                    </a>
+                </div>
+                <div class="contact-email-raw">kenzamzouri25@gmail.com</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span class="foot-left">© 2026 Kenza Mzouri</span>
+        <a href="https://kenzamzouri.dev" class="foot-domain">kenzamzouri.dev</a>
+        <span class="foot-right">built with C mindset</span>
+    </footer>
+
+    <div id="project-preview"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
